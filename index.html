@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>桃心</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .max {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: #232e6d;
+        }
+        .box {
+            display: flex;
+            justify-content: space-evenly;
+            width: 300px;
+            height: 300px;
+            margin: 120px auto 0px;
+        }
+        .item {
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+        }
+        .item:first-of-type,.item:last-of-type {
+            background-color: #f62e74;
+        }
+        .item:nth-of-type(2),.item:nth-last-of-type(2){
+            background-color: #f45330;
+        }
+        .item:nth-of-type(3),.item:nth-last-of-type(3){
+            background-color: #ffc883;
+        }
+        .item:nth-of-type(4){
+            background-color: #30d268;
+        }
+        .item:nth-of-type(5){
+            background-color: #006cb4;
+        }
+        .item:nth-of-type(6){
+            background-color: #784697;
+        }
+
+        /* 第一根和最后一根的动画 */
+
+        @keyframes s1{
+            0% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+            50% {
+                height: 60px;
+                /* 向上移动自身高度一半 */
+                transform: translateY(-30px);
+            }
+            100% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+
+        }
+        .item:first-child {
+            /* animation-fill-mode: 设置动画的第一帧 和最后一帧 both 从界面加载开始
+            就执行动画第一帧 */
+            animation: s1 4s 0s infinite both;
+        }
+        /* 第2根和倒数第二根动画 */
+        @keyframes s2{
+            0% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+            50% {
+                height: 125px;
+                transform: translateY(-62.5px);
+            }
+            100% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+
+        }
+        .item:nth-of-type(2){
+            animation: s2 4s 0.15s infinite both;
+        }
+
+        /* 第3根和倒数第3根 */
+        @keyframes s3{
+            0% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+            50% {
+                height: 160px;
+                transform: translateY(-80px);
+            }
+            100% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+
+        }
+        .item:nth-of-type(3){
+            animation:s3 4s 0.3s infinite both;
+        }
+
+        /* 第4根和倒数第4根 */
+        @keyframes s4{
+            0% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+            50% {
+                height: 160px;
+                transform: translateY(-60px);
+            }
+            100% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+
+        }
+        .item:nth-of-type(4){
+            animation:  s4 4s 0.45s infinite both;
+        }
+
+        /* 第5根动画 */
+        @keyframes s5{
+            0% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+            50% {
+                height: 190px;
+                /* 比第一根稍微高一点 */
+                transform: translateY(-40px);
+            }
+            100% {
+                height: 20px;
+                transform: translateY(0px);
+            }
+
+        }
+        .item:nth-of-type(5){
+            animation:  s5 4s 0.6s infinite both;
+        }
+
+        .item:nth-of-type(6){
+            animation:  s4 4s 0.75s infinite both;
+        }
+        .item:nth-of-type(7){
+            animation:  s3 4s 0.9s infinite both;
+        }
+        .item:nth-of-type(8){
+            animation:  s2 4s 1.05s infinite both;
+        }
+        .item:nth-of-type(9){
+            animation:  s1 4s 1.2s infinite both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="max">
+        <div class="box">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+
+        </div>
+    </div>
+
+</body>
+</html>
